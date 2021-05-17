@@ -124,25 +124,21 @@ void speakerSM(){
 			state_3 = init_3;
 		break;
 		case init_3:
-			if(button == 0x04) {
-	       			state_3 = on_3;
-			} else {
-				state_3 = init_3;
-			}
+	       		state_3 = on_3;
 		break;
 		case on_3: 
-			if(button == 0x00){
+			if(button != 0x00){
 				state_3 = off_3;
-			} else {
-				state_3 = on_3;
-			}
+			} //else {
+			//	state_3 = on_3;
+			//}
 		break;
 		case off_3:
 			if(button == 0x04){
 				state_3 = on_3;
-			} else {
-				state_3 = off_3;
-			}
+			}// else {
+			//	state_3 = off_3;
+			//}
 		break;
 		default:
 		break;
